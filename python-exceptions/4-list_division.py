@@ -14,5 +14,5 @@ def list_divison(my_list_1, my_list_2, list_length):
             print("out of range")
             new_list.append(0)
         finally:
-            pass
+            continue
         return new_list
