@@ -1,15 +1,19 @@
-'Test for 0-add_integar.py'
+'This is a set of tests for the add_integer function'
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-'positive values'
+'positive integer values'
 >>> add_integer(1, 2)
 3
 
-'A negative value'
+'one negative integer value'
 >>> add_integer(100, -2)
 98
 
-'A float and a negative'
->>> add_integer(100.3, -2)
-98.3
+'one value'
+>>> add_integer(2)
+100
+
+'two float values'
+>>> add_integer(5.5, 3.3)
+9
