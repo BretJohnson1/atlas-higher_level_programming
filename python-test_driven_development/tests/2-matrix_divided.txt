@@ -1,0 +1,37 @@
+'Test for 2-matrix_divided module'
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+'positive integer values'
+>>> matrix_divided([[3, 6, 9], [12, 15, 18], [21, 24, 27]], 3)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+'positive integer values with float results'
+>>> matrix_divided([[5, 9, 12], [2, 6, 22]], 5)
+[[1.0, 1.8, 2.4], [0.4, 1.2, 4.4]]
+
+'div is a negative integer value'
+>>> matrix_divided([[8, 4, -1], [4, 1, 8], [1, 2, 3]], -2)
+[[-4.0, -2.0, 0.5], [-2.0, -0.5, -4.0], [-0.5, -1.0, -1.5]]
+
+'positive and negative floating values'
+>>> matrix_divided([[9.4, 3.6, -1.2], [4.0, 1.6, 8], [1, 2, 3]], 2.0)
+[[4.7, 1.8, -0.6], [2.0, 0.8, 4.0], [0.5, 1.0, 1.5]]
+
+'div is a string'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], "Meco")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix is a string'
+>>> matrix_divided("Meco", 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'matrix have an inf'
+>>> matrix_divided([[9, 3, -1], [4, float('inf'), 8], [1, 2, 3]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
