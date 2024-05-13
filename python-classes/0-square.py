@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ For my square """
 
-class square:
+class Square:
     """ Initializing class for my square """
     pass
