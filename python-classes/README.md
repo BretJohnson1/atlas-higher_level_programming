@@ -1,0 +1,1 @@
+In this project, I'll be learnig about python classes and how they are used
