@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Defines a class called square """
+""" For my square """
 
 class square:
-    """ This class defines a square """
+    """ Initializing class for my square """
     pass
