@@ -12,10 +12,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = width
         if not isinstance(height, int):
-        raise TypeError("height must be an integer")
-    elif height < 0:
-raise ValueError("height must be >= 0")
-slef.__height = height
+            raise TypeError("height must be an integer")
+        elif height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = height
 
 @property
 def width(self):
@@ -43,7 +43,7 @@ def height(slef, value):
         raise TypeError("height must be an integer")
     elif value < 0:
         raise ValueError("height must be >= 0")
-    self.__height = value
+        self.__height = value
 
     def area(self)
         """ This public method returns the area of the rectangle """
@@ -65,8 +65,8 @@ def height(slef, value):
                     if row < self.height - 1:
                         string += '\n'
                         return string
-else:
-return string
+        else:
+            return string
 
 def __repr__(self):
     """ This method returns the string representation of new object """
