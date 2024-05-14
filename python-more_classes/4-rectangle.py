@@ -37,7 +37,7 @@ def height(self):
     return self.__height
 
 @height.setter
-def height(slef, value):
+def height(self, value):
     """ This method sets a value to its height """
     if not isinstance(value, int):
         raise TypeError("height must be an integer")
@@ -45,7 +45,7 @@ def height(slef, value):
         raise ValueError("height must be >= 0")
         self.__height = value
 
-    def area(self)
+    def area(self):
         """ This public method returns the area of the rectangle """
         return self.__height * self.__width
 
