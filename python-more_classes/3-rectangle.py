@@ -67,4 +67,3 @@ class Rectangle:
             return string
         else:
             return string
-        
