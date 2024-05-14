@@ -16,4 +16,4 @@
 
 'two float values'
 >>> add_integer(5.5, 3.3)
-8
+9
