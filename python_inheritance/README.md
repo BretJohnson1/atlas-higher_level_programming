@@ -1,0 +1,1 @@
+In this python project I'll be learning about inheritance and how it works with classes
