@@ -7,4 +7,3 @@ class BaseGeometry:
     def area(self):
         """ public instance method"""
         raise Exception("area() is not implemented")
-    
