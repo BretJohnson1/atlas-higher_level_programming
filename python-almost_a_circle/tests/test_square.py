@@ -154,7 +154,7 @@ class TestSquare(unittest.TestCase):
 
             # Assert that the saved data is a list with a signel square dictionary
             self.assertEqual(len(saved_data), 1)
-            slef.assertEqual(saved_data[0]['id'], s1.id)
+            self.assertEqual(saved_data[0]['id'], s1.id)
             self.assertEqual(saved_data[0]['size'], s1.size)
             self.assertEqual(saved_data[0]['x'], s1.x)
             self.assertEqual(saved_data[0]['y'], s1.y)
@@ -171,7 +171,7 @@ class TestSquare(unittest.TestCase):
         mock_open.assert_called_once_with('Square.json', 'r', encoding='utf-8')
 
         # Assert that the result is an empty list
-        slef.assertEqual(result, [])
+        self.assertEqual(result, [])
 
 if __name__ == '__main__':
     unittest.main()

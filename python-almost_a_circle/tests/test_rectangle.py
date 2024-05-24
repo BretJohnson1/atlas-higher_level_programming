@@ -94,7 +94,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_str(self):
         r1 = Rectangle(5, 10, 2, 3, 1)
-        slef.assertEqual(str(r1), "[Rectangle] (1) 2/3 - 5/10")
+        self.assertEqual(str(r1), "[Rectangle] (1) 2/3 - 5/10")
 
     def test_display_without_xy(self):
         r1 = Rectangle(5, 3)
@@ -218,7 +218,7 @@ class TestRectangle(unittest.TestCase):
         mock_open.assert_called_once_with('Retcangle.json', 'r', encoding='utf-8')
 
         # Assert that the result is an empty list
-        slef.assertEqual(result, [])
+        self.assertEqual(result, [])
 
 
 if __name__ == '__main__':
