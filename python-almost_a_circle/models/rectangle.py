@@ -82,12 +82,20 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """ Documentation?"""
-        if args:
-            attr = ['id', 'width', 'height', 'x', 'y']
-            for i, arg in enumerate(args):
-                setattr(self, attr[i], arg)
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
+        args_len = len(args)
+        if args_len >= 1:
+            self.id = args[0]
+        if args_len >= 2:
+            self.width = args[1]
+        if args_len >= 3:
+            self.height = args[2]
+        if args_len >= 4:
+            self.x = args[3]
+        if args_len >= 5:
+            self.y = args[4]
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def to_dictionary(self):
         """ Returns the rectangle in dictionary form"""
