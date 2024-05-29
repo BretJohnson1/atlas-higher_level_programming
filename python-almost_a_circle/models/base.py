@@ -9,9 +9,9 @@ class Base:
 
     def __init__(self, id=None):
         if id is not None:
-            self.id = id # assign id if provided
+            self.id = id  # assign id if provided
         else:
-            Base.__nb_objects += 1 # if id is not provided
+            Base.__nb_objects += 1  # if id is not provided
             self.id = Base.__nb_objects
 
     @staticmethod
