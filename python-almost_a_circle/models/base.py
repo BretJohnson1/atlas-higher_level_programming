@@ -59,6 +59,6 @@ class Base:
                 all_instances = cls.from_json_string(file.read())
                 for key, value in enumerate(all_instances):
                     all_instances[key] = cls.create(**all_instances[key])
-        BaseException:
-        pass
+        finally:
+            pass
         return all_instances
