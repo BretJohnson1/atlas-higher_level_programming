@@ -25,12 +25,13 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ Function to write json str to file"""
-        filename = cls.__name__ + ".json"
-        json_list = []
-        if list_objs is not None:
-            json_list = [obj.to_dictionary() for obj in list_objs]
-            with open(filename, 'w') as file:
-                file.write(cls.to_json_string(json_list))
+        file_name = cls.__name__ + ".json"
+        with open(file_name, "w") as jsonfile:
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jsonfile.write(Base.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
@@ -52,13 +53,14 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Returns a list of insrances"""
-        the_file = cls.__name__ + ".json"
-        all_instances = []
-        try:
-            with open(the_file, 'r', encoding='utf-8') as file:
-                all_instances = cls.from_json_string(file.read())
-                for key, value in enumerate(all_instances):
-                    all_instances[key] = cls.create(**all_instances[key])
-        finally:
-            pass
-        return all_instances
+        file_name = cls.__name__ + ".json"
+        list_of_instances = []
+        list_dictionaries = []
+
+        if os.path.exists(file_name):
+            with open(file_name, 'r') as my_file:
+                my_str = my_file.read()
+                list_dictionaries = cls.from_json_string(my_str)
+                for dictionary in list_dictionaries:
+                    list_of_instances.append(cls.create(**dictionary))
+        return list_of_instances
