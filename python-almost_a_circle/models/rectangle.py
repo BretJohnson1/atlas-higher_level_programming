@@ -17,19 +17,19 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        return(self.__width)
+        return (self.__width)
 
     @property
     def height(self):
-        return(self.__height)
+        return (self.__height)
 
     @property
     def x(self):
-        return(self.__x)
+        return (self.__x)
 
     @property
     def y(self):
-        return(self.__y)
+        return (self.__y)
 
     @height.setter
     def height(self, value):
@@ -52,7 +52,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
-             raise ValueError("x must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.setter
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
     def area(self):
         """ Area function for rectangle"""
-        return(self.__height * self.__width)
+        return (self.__height * self.__width)
 
     def display(self):
         """ Function to display the rectangle"""
@@ -91,7 +91,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ Returns the rectangle in dictionary form"""
-        return{
+        return {
             'id': self.id,
             'width': self.width,
             'height': self.height,
