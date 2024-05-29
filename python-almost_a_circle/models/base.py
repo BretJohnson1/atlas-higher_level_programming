@@ -5,7 +5,7 @@ import json
 
 class Base:
     """ This is the base class"""
-    __nb_objects = 0 # private class attribute
+    __nb_objects = 0  # private class attribute
 
     def __init__(self, id=None):
         if id is not None:
@@ -18,7 +18,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ Function to make into json file"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return  "[]"
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
