@@ -1,0 +1,1 @@
+In this project I'll be working with more SQL stuff
