@@ -24,3 +24,4 @@ if __name__ == "__main__":
         state_name = session.query(State.name).filter_by(id=city.state_id)\
                      .first()
         print("{}: ({}) {}".format(state_name[0], city.id, city.name))
+        
