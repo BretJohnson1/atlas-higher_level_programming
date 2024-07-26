@@ -9,7 +9,7 @@ request(filmApiUrl, function (err, response, body) {
     // Convert the data to JSON
     const films = JSON.parse(body).results;
     // Initialize movieCount
-    let movieCount = 0;
+    let movieCount = 10;
     // Iterating over each film to find matching character id
     films.forEach(function (film) {
       // Find the characters for each movie
